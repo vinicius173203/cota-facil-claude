@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cota-facil": {
+      "type": "http",
+      "url": "https://www.cotaafacil.com.br/mcp"
+    }
+  }
+}

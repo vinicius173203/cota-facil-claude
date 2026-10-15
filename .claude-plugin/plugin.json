@@ -1,0 +1,19 @@
+{
+  "name": "cota-facil",
+  "displayName": "Cota Fácil",
+  "version": "1.0.0",
+  "description": "Compras B2B pelo Claude: monte a lista, cote com fornecedores, acompanhe respostas, negocie preços e cobre entregas no Cota Fácil, sempre com a sua confirmação antes de enviar algo.",
+  "author": {
+    "name": "Cota Fácil",
+    "email": "suporte@cotaafacil.com.br",
+    "url": "https://www.cotaafacil.com.br"
+  },
+  "homepage": "https://www.cotaafacil.com.br/cota-facil-no-claude",
+  "license": "MIT",
+  "keywords": ["compras", "cotação", "fornecedores", "negociação", "suprimentos", "b2b"],
+  "icon": "./logo.png",
+  "documentationUrl": "https://www.cotaafacil.com.br/cota-facil-no-claude",
+  "supportUrl": "https://www.cotaafacil.com.br/cota-facil-no-claude#suporte",
+  "privacyPolicyUrl": "https://www.cotaafacil.com.br/termos-de-privacidade",
+  "termsOfServiceUrl": "https://www.cotaafacil.com.br/politica-de-uso"
+}
