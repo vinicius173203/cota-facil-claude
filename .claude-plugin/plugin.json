@@ -1,8 +1,8 @@
 {
   "name": "cota-facil",
   "displayName": "Cota Fácil",
-  "version": "1.0.0",
-  "description": "Compras B2B pelo Claude: monte a lista, cote com fornecedores, acompanhe respostas, negocie preços e cobre entregas no Cota Fácil, sempre com a sua confirmação antes de enviar algo.",
+  "version": "1.2.0",
+  "description": "Compras B2B pelo Claude: monte a lista, cote com fornecedores, compare respostas, negocie preços, gere pedidos, cobre entregas e cuide do estoque no Cota Fácil, sempre com a sua confirmação antes de gravar ou enviar algo.",
   "author": {
     "name": "Cota Fácil",
     "email": "suporte@cotaafacil.com.br",

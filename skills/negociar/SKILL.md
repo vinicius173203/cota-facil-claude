@@ -23,7 +23,7 @@ Ofereça só as decisões que `negociacao_ver` listou.
 
 | Decisão | Quando | O que faz |
 |---|---|---|
-| `aprovar` | aguardando aprovação | aprova e envia a proposta ao fornecedor |
+| `aprovar` | aguardando aprovação | aprova e envia a proposta ao fornecedor; na última rodada, com tudo aceito ou no resultado consolidado, **gera o pedido** |
 | `rejeitar` | aguardando aprovação ou resultado consolidado | encerra sem acordo, nada é enviado |
 | `enviar` | mensagem pendente ou fora do horário | envia agora (fora do horário, fica agendada) |
 | `aceitar` | resposta recebida | fecha com acordo |
@@ -33,11 +33,13 @@ Ofereça só as decisões que `negociacao_ver` listou.
 Se a negociação andou entre o preparo e a confirmação (nova rodada, nova resposta), o código deixa
 de valer: veja de novo e prepare outra vez.
 
-## O que não é feito por aqui
+## Quando aprovar gera pedido
 
-**Gerar pedido** não é feito pelo Claude. Isso inclui aprovar o resultado consolidado e aprovar uma
-negociação na última rodada ou com todos os itens aceitos. Nesses casos, oriente: "aprove pelo site,
-em Negociações → Aprovações".
+Aprovar o resultado consolidado, ou uma negociação na última rodada ou com todos os itens aceitos,
+**gera o pedido** e manda o PDF ao fornecedor. O resumo de `preparar_decisao_negociacao` avisa isso e
+mostra o valor aproximado. Deixe claro ao usuário que é dinheiro e só confirme com um "sim" explícito.
+Se o valor passar da alçada da empresa, vira uma autorização para o aprovador (veja a skill
+`gerar-pedidos`). Exige a permissão de aprovar negociação ou de gerar pedidos.
 
 ## Cuidados
 

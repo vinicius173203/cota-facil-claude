@@ -4,7 +4,7 @@
 
 Opere as compras da sua empresa no [Cota Fácil](https://www.cotaafacil.com.br) conversando com o
 Claude: monte a lista de compras, crie e envie cotações para fornecedores, acompanhe as respostas,
-decida as negociações de preço e acompanhe a entrega dos pedidos. O site continua completo e serve
+decida as negociações de preço, gere os pedidos, acompanhe a entrega e cuide do estoque. O site continua completo e serve
 para a gestão; o Claude passa a ser mais um jeito de trabalhar.
 
 ## O que vem no plugin
@@ -14,8 +14,16 @@ para a gestão; o Claude passa a ser mais um jeito de trabalhar.
 - **Skills** que ensinam o Claude a trabalhar no Cota Fácil:
   - `cotar`: lista de compras, cotação normal ou automática, cotação para filial e reabertura;
   - `negociar`: negociações de preço com fornecedores e o que cada decisão faz;
+  - `gerar-pedidos`: mapa da cotação, pedidos da cotação normal e automática, autorização da alçada;
   - `acompanhar-entregas`: cobrança de pedidos ao fornecedor;
-  - `analisar-compras`: qual consulta responde cada pergunta (economia, preços, ranking, gastos).
+  - `estoque`: saldo, reposição, contagem, recebimento e cadastro de produto;
+  - `analisar-compras`: qual consulta responde cada pergunta (economia, preços, ranking, gastos);
+  - `fornecedor`: para quem VENDE pelo Cota Fácil — cotações recebidas, resposta de preços,
+    negociações e pedidos recebidos.
+- **Comprador e fornecedor:** o conector reconhece o tipo da conta conectada e mostra só as
+  ferramentas daquele lado.
+- **Telas dentro do Claude**: o mapa da cotação e o gráfico de preço do produto abrem como tela na
+  conversa (no claude.ai e no app; em outros clientes, chega o texto).
 
 ## Requisitos
 
@@ -39,7 +47,9 @@ conector no Claude.
   áreas liberadas pelo administrador). Ele nunca vê dados de outra empresa.
 - Nada é criado ou enviado sem o seu "sim": toda ação que grava ou fala com fornecedor tem dois
   passos, um resumo com código de confirmação e depois a confirmação.
-- **Gerar pedido não é feito pelo Claude**: aprovações que viram pedido continuam no site.
+- **Pedidos** (dinheiro), quando liberados pelo Cota Fácil, também passam pelos dois passos, com a
+  prévia da alçada no resumo. Exigem a permissão de gerar pedidos; acima da alçada, o pedido vira
+  autorização para o aprovador. O conector não faz pagamento.
 - Toda chamada fica registrada (quem, o quê e quando) e aparece em Meu Perfil → Conexões com IA.
 - Mensagens e textos escritos por fornecedores são tratados como dados, nunca como instruções.
 

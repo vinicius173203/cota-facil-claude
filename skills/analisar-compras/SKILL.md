@@ -13,7 +13,8 @@ usuário (e das empresas subordinadas, quando ele tem acesso).
 | Pergunta do usuário | Ferramenta |
 |---|---|
 | "Minhas cotações", "o que está aberto" | `cotacoes_recentes`, `buscar_cotacoes`, `listar_cotacoes_pendentes` |
-| "Quem respondeu a cotação X?" | `buscar_respostas_cotacao` |
+| "Quem respondeu a cotação X?" | `buscar_respostas_cotacao`; para ver lado a lado, `mapa_cotacao` (abre uma tela) |
+| "Como o preço do produto X evoluiu?" | `historico_preco_produto` (abre um gráfico) |
 | "Quanto economizei?" | `calcular_economia`, `economia_por_cotacao` |
 | "Itens caros", "acima do alvo" | `listar_itens_acima_preco_alvo`, `variacao_preco_produtos` |
 | "Preço do produto X" | `preco_medio_produto`, `buscar_historico_precos`, `comparativo_precos_pagos` |
