@@ -12,7 +12,7 @@ para a gestão; o Claude passa a ser mais um jeito de trabalhar.
 - **Conector** `cota-facil`: servidor MCP remoto em `https://www.cotaafacil.com.br/mcp`, com login
   pela sua conta do Cota Fácil (OAuth). É ele que lê e grava no Cota Fácil.
 - **Skills** que ensinam o Claude a trabalhar no Cota Fácil:
-  - `cotar`: lista de compras, cotação normal ou automática, cotação para filial e reabertura;
+  - `cotar`: lista de compras (inclusive lista de materiais em PDF, foto ou planilha), cotação normal ou automática, cotação para filial e reabertura;
   - `negociar`: negociações de preço com fornecedores e o que cada decisão faz;
   - `gerar-pedidos`: mapa da cotação, pedidos da cotação normal e automática, autorização da alçada;
   - `acompanhar-entregas`: cobrança de pedidos ao fornecedor;

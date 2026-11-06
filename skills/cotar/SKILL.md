@@ -24,6 +24,32 @@ adiciona aqui aparece lá, e vice-versa.
 O código vale 10 minutos e fica preso ao conteúdo. Se a lista, o local, o prazo ou os fornecedores
 mudarem, prepare de novo.
 
+## Lista de materiais do usuário (PDF, foto, planilha, texto)
+
+Quando o usuário mandar uma lista pronta, em **qualquer formato** (orçamento em PDF, foto, planilha,
+texto colado; colunas em qualquer ordem):
+
+1. **Ler**: você mesmo lê o arquivo e tira de cada linha a descrição, a quantidade e a unidade. Se a
+   leitura ficar duvidosa (coluna de quantidade desalinhada, item sem quantidade), pergunte antes de seguir.
+2. **Conferir**: `conferir_lista_produtos` com as linhas (até 300 por chamada). Não grava nada. Volta
+   em quatro grupos:
+   - **EXISTE**: já tem `produto_id`. Se vier a conta de metros para barras, confirme com o usuário;
+   - **CONFERIR**: há candidatos parecidos (ex.: esgoto série normal × reforçado). Pergunte qual é;
+   - **NÃO EXISTE**: precisa cadastrar;
+   - **QUANTIDADE ZERO**: costuma ser alternativa ou opcional. Pergunte se entra.
+   Linha **REPETIDA** vira um item só, com as quantidades somadas.
+3. **Cadastrar só o que falta**: `listar_grupos_subgrupos` para os subgrupos, depois
+   `preparar_cadastro_produtos` com todos os novos de uma vez (nome no padrão do catálogo, ex.:
+   `TUBO PVC SOLDAVEL 25MM 6M`; nas referências, o texto da lista do usuário). Mostre o que entra e o
+   que fica de fora e, depois do "sim", `confirmar_cadastro_produtos` com os mesmos produtos e o código.
+   O servidor recusa nome que já existe, repetido no lote e **parecido** com um existente. Só mande
+   `mesmo_assim` quando o usuário disser que é outro produto.
+4. **Montar a lista**: `lista_adicionar_itens` com os `produto_id` (existentes e recém-cadastrados) e
+   as quantidades na unidade do produto. Mostre a lista final (`lista_ver`) e siga para a cotação se o
+   usuário quiser.
+
+Nunca cadastre um produto que apareceu em EXISTE ou CONFERIR sem o usuário dizer que é outro.
+
 ## Normal ou automática
 
 - **Normal** (`tipo: "normal"`, padrão): vai para os fornecedores escolhidos em `fornecedor_ids`
